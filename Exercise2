@@ -3,8 +3,27 @@
 int main(void){
 	DDRB = 0xFF; // Configure port B's 8 pins as outputs
 	PORTB = 0x00; // Initialize PORTB output to 0’s
-	while(1){
-		PORTB = 0x0F; // Writes port B's 8 pins with 00001111
+	Button = 0x01;
+	PORTA0=0x02:
+	PORTA1=0x02;
+	PORTC=0x07;
+	
+	while(1) 
+	{
+	if(Button=PA1)
+	{
+	PORTC=PORTC-1;
+	}
+	
+	if(PORTC=PA0)
+	{
+	PORTC=PORTC=1;
+	}
+	else if(PORTC= PORTA0 &&PORTA1)
+	{
+	PORTC=0;
+	}
+	
 	}
 	return 1;
 }
