@@ -1,0 +1,9 @@
+test “cntA0 > 100 => PORTB: 0x0F”
+set exampleTick::cntA0 = 101
+set state = pressA1
+setPINA 0x02
+continue 2
+expectPORTB 0x0F
+expect state pressA1
+checkResult
+
