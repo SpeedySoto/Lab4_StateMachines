@@ -3,9 +3,24 @@
 int main(void){
 	DDRB = 0xFF; // Configure port B's 8 pins as outputs
 	PORTB = 0x00; // Initialize PORTB output to 0’s
+	PORTB0=0x00;
+	Light= 0x01;
+	Button = 0x02;
+	PORTB= 0x00;
+
 	while(1)
+	{
+	if(Button=1)
 {
-		
+	PORTB0=0x00;
+	PORTB1=0x01;
+}	
+	if(Button=0)
+	{
+	PORTB0=0x01;
+	PORTB1= 0x00;
+	}
+	
 	}
 	return 1;
 }
